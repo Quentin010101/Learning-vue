@@ -1,7 +1,12 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import { createApp } from "vue";
+import router from "./router";
 
-window.Alpine = Alpine;
+import CustomerIndex from "./components/CustomerIndex.vue";
 
-Alpine.start();
+createApp({
+    components:{
+        CustomerIndex
+    }
+}).use(router).mount('#app');
